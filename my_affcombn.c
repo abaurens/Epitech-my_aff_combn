@@ -68,15 +68,20 @@ void		my_real_aff_comb_n(int n, int nn, int nb)
 		}
 		i++;
 	}
+	return (0);
 }
 int			my_aff_combn(int n)
 {
+	if (n <= 0 || n > 10)
+		return (-1);
 	my_real_aff_comb_n(n, n, -1);
+	return (0);
 }
 
 int	main()
 {
-	my_aff_combn(2);
+	if (my_aff_combn(2) == -1)
+		return (1);
 	my_putchar('\n');
 	return (0);
 }
