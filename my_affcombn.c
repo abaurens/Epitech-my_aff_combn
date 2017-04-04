@@ -101,14 +101,14 @@ int	main(int ac, char **av)
       write(2, "Please, input a single positive number.\n", 40);
       return (1);
     }
-  while (av[++i])
+  while (av[1][++i])
     {
-      if (av[i] < '0' || av[i] > '9')
+      if (av[1][i] < '0' || av[1][i] > '9')
 	{
 	  write(2, "Error : Positive number expected!\n", 34);
 	  return (1);
 	}
     }
-  my_print_combn(atoi(av[0]));
+  my_print_combn(atoi(av[1]));
   return (0);
 }
